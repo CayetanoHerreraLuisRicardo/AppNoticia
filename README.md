@@ -8,4 +8,4 @@ Cabe señalar que este proyecto incluye el codigo para la app para PC y para dis
 
 Aqui les dejo el link para que puedan descargar app desde la tienda de Windows, pueden descargarla para su PC o su Movil:
 
-https://www.microsoft.com/es-mx/store/apps/appnoticia/9nblgggzzj86#app-details
+https://www.microsoft.com/es-mx/store/apps/appnoticia/9nblgggzzj86
