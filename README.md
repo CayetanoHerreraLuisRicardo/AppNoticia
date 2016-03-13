@@ -7,10 +7,10 @@ Esta aplicacion recopila noticias de los diarios y blogs esto a partir de servic
 Cabe seÃ±alar que este proyecto incluye el codigo para la app para PC y para dispositivos moviles con su S.O Windows >= 8.1 y Windows phone >= 8.1 respectivamente.
 
 Screenshot Windows Phone:
-![windows phone]({{site.baseurl}}/http://store-images.s-microsoft.com/image/apps.10016.13510798883664697.00a5dcd4-89bf-4e6f-bb8b-92bf3e0028c4.79d2d8b2-5a8a-4e1f-9f5c-1a34c05e05e5)
+![windows phone]({{site.baseurl}}/https://www.dropbox.com/s/6et33oo2c9pu5wm/appnoticia-movil.jpg)
 
 Screenshot Windows PC:
-![Windows PC]({{site.baseurl}}/http://store-images.s-microsoft.com/image/apps.44196.13510798883664697.31f2e401-4a4d-4d72-a15f-598c649b8ae5.20b9364d-06e8-4815-a144-a3b402a3e197)
+![Windows PC]({{site.baseurl}}/https://www.dropbox.com/s/v8t4h9zt8sv9evi/appnoticia-pc.jpg)
 
 Aqui les dejo el link para que puedan descargar app desde la tienda de Windows, pueden descargarla para su PC o su Movil:
 
