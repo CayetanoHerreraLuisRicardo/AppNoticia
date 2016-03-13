@@ -4,7 +4,7 @@
 
 Esta aplicacion recopila noticias de los diarios y blogs esto a partir de servicios web que ofrecen el cual vienen siendo archivos XML que son procesados por la app para poder alimentar informacion que el usuario necesite.
 
-Cabe seÃ±alar que este proyecto incluye el codigo para la app para PC y para dispositivos moviles con su S.O Windows >= 8.1 y Windows phone >= 8.1 respectivamente.
+Cabe señalar que este proyecto incluye el codigo para la app para PC y para dispositivos moviles con su S.O Windows >= 8.1 y Windows phone >= 8.1 respectivamente.
 
 > Screenshot Windows Phone:
 
