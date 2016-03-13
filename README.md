@@ -6,11 +6,11 @@ Esta aplicacion recopila noticias de los diarios y blogs esto a partir de servic
 
 Cabe seÃ±alar que este proyecto incluye el codigo para la app para PC y para dispositivos moviles con su S.O Windows >= 8.1 y Windows phone >= 8.1 respectivamente.
 
-Screenshot Windows Phone:
+> Screenshot Windows Phone:
 
 ![windows phone](https://github.com/CayetanoHerreraLuisRicardo/AppNoticia/blob/master/AppStudio.Shared/Assets/appnoticia-movil.jpg)
 
-Screenshot Windows PC:
+> Screenshot Windows PC:
 
 ![windows PC](https://github.com/CayetanoHerreraLuisRicardo/AppNoticia/blob/master/AppStudio.Shared/Assets/appnoticia-pc.jpg)
 
