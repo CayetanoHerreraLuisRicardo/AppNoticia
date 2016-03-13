@@ -1,0 +1,81 @@
+<Application
+    x:Class="AppStudio.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppStudio"
+    xmlns:controls="using:AppStudio.Controls"
+    xmlns:common="using:AppStudio.Common"
+    xmlns:localData="using:Shared"
+    xmlns:html2xaml="using:AppStudio.Controls.Html2Xaml"
+    xmlns:commands="using:AppStudio.Commands">
+
+    <!--Application Resources-->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default" Source="Styles/DefaultTheme.xaml"/>
+            </ResourceDictionary.ThemeDictionaries>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/FontSizes.xaml"/>
+                <ResourceDictionary Source="Styles/AppTheme.xaml"/>
+                <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="Styles/PlatformStyles.xaml"/>
+                <!-- Application DataTemplate imports -->
+                <ResourceDictionary Source="Views/DataTemplates/DiariosDeMexicoYElMundoViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/ReformaViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/CNNEspanolViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/YahooNoticiasViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/ElUniversalViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/MilenioViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/SDPNoticiasViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/ExcelsiorViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/InformadorViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/LaJornadaViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/ActualidadYNovedadesViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/XatakaViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/TICbeatViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/TecnogeekViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/TecnodatumViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/NoPuedoCreerViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/MicrosiervosViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/HipertextualViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/GizmodoViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/ParentesisViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/SoftwareHardwareEInternetViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/GeeksRoomViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/NeoteoViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/MuyComputerViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/TuexpertoViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/TheInquirerViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/GenbetaViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/FayerWayerViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/EngadgetViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/ContactoViews.xaml"/>
+                <ResourceDictionary Source="Views/DataTemplates/AcercaDeViews.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <x:String x:Key="AppName">AppNoticias</x:String>
+            <x:String x:Key="AppTitle">AppNoticias</x:String>
+
+            <!-- Html2Xaml -->
+            <html2xaml:Properties x:Key="Properties"/>
+
+            <!-- VariableSizedGrid -->
+            <controls:VariableSizedGrid x:Key="VariableSizedGrid"/>
+            <controls:RichTextColumns x:Key="RichTextColumns"/>
+
+            <!-- ItemClickCommand -->
+            <commands:ItemClickCommand x:Key="ItemClickCommand" />
+
+            <!-- Converters -->
+            <controls:VisibilityConverter x:Key="VisibilityConverter"/>
+            <controls:StringVisibilityConverter x:Key="StringVisibilityConverter"/>
+            <controls:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+            <controls:GridLengthConverter x:Key="GridLengthConverter"/>
+
+            <!-- Action Commands -->
+            <local:ActionCommands x:Key="ActionCommands"/>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,797 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{bcc730be-a7eb-4acc-ba66-b5d11b6ecfa7}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppStudio</RootNamespace>
+    <AssemblyName>AppStudio</AssemblyName>
+    <DefaultLanguage>es-ES</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile></PackageCertificateKeyFile>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="Properties\Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\BadgeLogo.png" />
+    <Content Include="Views\DataTemplates\DiariosDeMexicoYElMundoViews.xaml" />
+    <Content Include="Views\DataTemplates\ReformaViews.xaml" />
+    <Content Include="Views\DataTemplates\CNNEspanolViews.xaml" />
+    <Content Include="Views\DataTemplates\YahooNoticiasViews.xaml" />
+    <Content Include="Views\DataTemplates\ElUniversalViews.xaml" />
+    <Content Include="Views\DataTemplates\MilenioViews.xaml" />
+    <Content Include="Views\DataTemplates\SDPNoticiasViews.xaml" />
+    <Content Include="Views\DataTemplates\ExcelsiorViews.xaml" />
+    <Content Include="Views\DataTemplates\InformadorViews.xaml" />
+    <Content Include="Views\DataTemplates\LaJornadaViews.xaml" />
+    <Content Include="Views\DataTemplates\ActualidadYNovedadesViews.xaml" />
+    <Content Include="Views\DataTemplates\XatakaViews.xaml" />
+    <Content Include="Views\DataTemplates\TICbeatViews.xaml" />
+    <Content Include="Views\DataTemplates\TecnogeekViews.xaml" />
+    <Content Include="Views\DataTemplates\TecnodatumViews.xaml" />
+    <Content Include="Views\DataTemplates\NoPuedoCreerViews.xaml" />
+    <Content Include="Views\DataTemplates\MicrosiervosViews.xaml" />
+    <Content Include="Views\DataTemplates\HipertextualViews.xaml" />
+    <Content Include="Views\DataTemplates\GizmodoViews.xaml" />
+    <Content Include="Views\DataTemplates\ParentesisViews.xaml" />
+    <Content Include="Views\DataTemplates\SoftwareHardwareEInternetViews.xaml" />
+    <Content Include="Views\DataTemplates\GeeksRoomViews.xaml" />
+    <Content Include="Views\DataTemplates\NeoteoViews.xaml" />
+    <Content Include="Views\DataTemplates\MuyComputerViews.xaml" />
+    <Content Include="Views\DataTemplates\TuexpertoViews.xaml" />
+    <Content Include="Views\DataTemplates\TheInquirerViews.xaml" />
+    <Content Include="Views\DataTemplates\GenbetaViews.xaml" />
+    <Content Include="Views\DataTemplates\FayerWayerViews.xaml" />
+    <Content Include="Views\DataTemplates\EngadgetViews.xaml" />
+    <Content Include="Views\DataTemplates\ContactoViews.xaml" />
+    <Content Include="Views\DataTemplates\AcercaDeViews.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-140.png" />
+    <Content Include="Assets\SmallLogo.scale-180.png" />
+    <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Square310x310Logo.scale-100.png" />
+    <Content Include="Assets\Square70x70Logo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Views\AppFlyouts\PrivacyFlyout.xaml.cs">
+      <DependentUpon>PrivacyFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImageViewer.xaml.cs">
+      <DependentUpon>ImageViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReformaPage.xaml.cs">
+      <DependentUpon>ReformaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CNNEspanolPage.xaml.cs">
+      <DependentUpon>CNNEspanolPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\YahooNoticiasPage.xaml.cs">
+      <DependentUpon>YahooNoticiasPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ElUniversalPage.xaml.cs">
+      <DependentUpon>ElUniversalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MilenioPage.xaml.cs">
+      <DependentUpon>MilenioPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SDPNoticiasPage.xaml.cs">
+      <DependentUpon>SDPNoticiasPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExcelsiorPage.xaml.cs">
+      <DependentUpon>ExcelsiorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InformadorPage.xaml.cs">
+      <DependentUpon>InformadorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LaJornadaPage.xaml.cs">
+      <DependentUpon>LaJornadaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\XatakaPage.xaml.cs">
+      <DependentUpon>XatakaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TICbeatPage.xaml.cs">
+      <DependentUpon>TICbeatPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TecnogeekPage.xaml.cs">
+      <DependentUpon>TecnogeekPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TecnodatumPage.xaml.cs">
+      <DependentUpon>TecnodatumPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NoPuedoCreerPage.xaml.cs">
+      <DependentUpon>NoPuedoCreerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MicrosiervosPage.xaml.cs">
+      <DependentUpon>MicrosiervosPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HipertextualPage.xaml.cs">
+      <DependentUpon>HipertextualPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GizmodoPage.xaml.cs">
+      <DependentUpon>GizmodoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ParentesisPage.xaml.cs">
+      <DependentUpon>ParentesisPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GeeksRoomPage.xaml.cs">
+      <DependentUpon>GeeksRoomPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NeoteoPage.xaml.cs">
+      <DependentUpon>NeoteoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MuyComputerPage.xaml.cs">
+      <DependentUpon>MuyComputerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TuexpertoPage.xaml.cs">
+      <DependentUpon>TuexpertoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TheInquirerPage.xaml.cs">
+      <DependentUpon>TheInquirerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GenbetaPage.xaml.cs">
+      <DependentUpon>GenbetaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FayerWayerPage.xaml.cs">
+      <DependentUpon>FayerWayerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EngadgetPage.xaml.cs">
+      <DependentUpon>EngadgetPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReformaList.xaml.cs">
+      <DependentUpon>ReformaList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CNNEspanolList.xaml.cs">
+      <DependentUpon>CNNEspanolList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\YahooNoticiasList.xaml.cs">
+      <DependentUpon>YahooNoticiasList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ElUniversalList.xaml.cs">
+      <DependentUpon>ElUniversalList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MilenioList.xaml.cs">
+      <DependentUpon>MilenioList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SDPNoticiasList.xaml.cs">
+      <DependentUpon>SDPNoticiasList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExcelsiorList.xaml.cs">
+      <DependentUpon>ExcelsiorList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InformadorList.xaml.cs">
+      <DependentUpon>InformadorList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LaJornadaList.xaml.cs">
+      <DependentUpon>LaJornadaList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReformaDetailPage.xaml.cs">
+      <DependentUpon>ReformaDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CNNEspanolDetailPage.xaml.cs">
+      <DependentUpon>CNNEspanolDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\YahooNoticiasDetailPage.xaml.cs">
+      <DependentUpon>YahooNoticiasDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ElUniversalDetailPage.xaml.cs">
+      <DependentUpon>ElUniversalDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MilenioDetailPage.xaml.cs">
+      <DependentUpon>MilenioDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SDPNoticiasDetailPage.xaml.cs">
+      <DependentUpon>SDPNoticiasDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExcelsiorDetailPage.xaml.cs">
+      <DependentUpon>ExcelsiorDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InformadorDetailPage.xaml.cs">
+      <DependentUpon>InformadorDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LaJornadaDetailPage.xaml.cs">
+      <DependentUpon>LaJornadaDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\XatakaList.xaml.cs">
+      <DependentUpon>XatakaList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TICbeatList.xaml.cs">
+      <DependentUpon>TICbeatList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TecnogeekList.xaml.cs">
+      <DependentUpon>TecnogeekList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TecnodatumList.xaml.cs">
+      <DependentUpon>TecnodatumList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NoPuedoCreerList.xaml.cs">
+      <DependentUpon>NoPuedoCreerList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MicrosiervosList.xaml.cs">
+      <DependentUpon>MicrosiervosList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HipertextualList.xaml.cs">
+      <DependentUpon>HipertextualList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GizmodoList.xaml.cs">
+      <DependentUpon>GizmodoList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ParentesisList.xaml.cs">
+      <DependentUpon>ParentesisList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\XatakaDetailPage.xaml.cs">
+      <DependentUpon>XatakaDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TICbeatDetailPage.xaml.cs">
+      <DependentUpon>TICbeatDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TecnogeekDetailPage.xaml.cs">
+      <DependentUpon>TecnogeekDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TecnodatumDetailPage.xaml.cs">
+      <DependentUpon>TecnodatumDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NoPuedoCreerDetailPage.xaml.cs">
+      <DependentUpon>NoPuedoCreerDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MicrosiervosDetailPage.xaml.cs">
+      <DependentUpon>MicrosiervosDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HipertextualDetailPage.xaml.cs">
+      <DependentUpon>HipertextualDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GizmodoDetailPage.xaml.cs">
+      <DependentUpon>GizmodoDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ParentesisDetailPage.xaml.cs">
+      <DependentUpon>ParentesisDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GeeksRoomList.xaml.cs">
+      <DependentUpon>GeeksRoomList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NeoteoList.xaml.cs">
+      <DependentUpon>NeoteoList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MuyComputerList.xaml.cs">
+      <DependentUpon>MuyComputerList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TuexpertoList.xaml.cs">
+      <DependentUpon>TuexpertoList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TheInquirerList.xaml.cs">
+      <DependentUpon>TheInquirerList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GenbetaList.xaml.cs">
+      <DependentUpon>GenbetaList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FayerWayerList.xaml.cs">
+      <DependentUpon>FayerWayerList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EngadgetList.xaml.cs">
+      <DependentUpon>EngadgetList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GeeksRoomDetailPage.xaml.cs">
+      <DependentUpon>GeeksRoomDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NeoteoDetailPage.xaml.cs">
+      <DependentUpon>NeoteoDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MuyComputerDetailPage.xaml.cs">
+      <DependentUpon>MuyComputerDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TuexpertoDetailPage.xaml.cs">
+      <DependentUpon>TuexpertoDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TheInquirerDetailPage.xaml.cs">
+      <DependentUpon>TheInquirerDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GenbetaDetailPage.xaml.cs">
+      <DependentUpon>GenbetaDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FayerWayerDetailPage.xaml.cs">
+      <DependentUpon>FayerWayerDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EngadgetDetailPage.xaml.cs">
+      <DependentUpon>EngadgetDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AcercaDeList.xaml.cs">
+      <DependentUpon>AcercaDeList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AcercaDeDetailPage.xaml.cs">
+      <DependentUpon>AcercaDeDetailPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\AppFlyouts\PrivacyFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ImageViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ReformaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CNNEspanolPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\YahooNoticiasPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ElUniversalPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MilenioPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SDPNoticiasPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExcelsiorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InformadorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LaJornadaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\XatakaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TICbeatPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TecnogeekPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TecnodatumPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NoPuedoCreerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MicrosiervosPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HipertextualPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GizmodoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ParentesisPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GeeksRoomPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NeoteoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MuyComputerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TuexpertoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TheInquirerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GenbetaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FayerWayerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EngadgetPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ReformaList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CNNEspanolList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\YahooNoticiasList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ElUniversalList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MilenioList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SDPNoticiasList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExcelsiorList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InformadorList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LaJornadaList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ReformaDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CNNEspanolDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\YahooNoticiasDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ElUniversalDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MilenioDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SDPNoticiasDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExcelsiorDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InformadorDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LaJornadaDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\XatakaList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TICbeatList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TecnogeekList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TecnodatumList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NoPuedoCreerList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MicrosiervosList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HipertextualList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GizmodoList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ParentesisList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\XatakaDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TICbeatDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TecnogeekDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TecnodatumDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NoPuedoCreerDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MicrosiervosDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HipertextualDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GizmodoDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ParentesisDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GeeksRoomList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NeoteoList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MuyComputerList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TuexpertoList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TheInquirerList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GenbetaList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FayerWayerList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EngadgetList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GeeksRoomDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NeoteoDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MuyComputerDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TuexpertoDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TheInquirerDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GenbetaDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FayerWayerDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EngadgetDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AcercaDeList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AcercaDeDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\FontSizes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\PlatformStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
+      <Name>Behaviors SDK %28XAML%29</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Reference Include="AppStudio.Common">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\AppStudio.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppStudio.Data\AppStudio.Data.csproj">
+      <Project>{811cc6bc-34a4-42a6-a566-cbc872402275}</Project>
+      <Name>AppStudio.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="..\AppStudio.Shared\AppStudio.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,58 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "Reforma",
+      "Icon": "/Assets/DataImages/ModuleLogo-6.png",
+      "Target": "ReformaPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "CNN Español",
+      "Icon": "/Assets/DataImages/ModuleLogo-12.png",
+      "Target": "CNNEspanolPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Yahoo Noticias",
+      "Icon": "/Assets/DataImages/ModuleLogo-8.png",
+      "Target": "YahooNoticiasPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "El Universal",
+      "Icon": "/Assets/DataImages/ModuleLogo-9.png",
+      "Target": "ElUniversalPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Milenio",
+      "Icon": "/Assets/DataImages/ModuleLogo-11.png",
+      "Target": "MilenioPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "SDPNoticias",
+      "Icon": "/Assets/DataImages/ModuleLogo-13.png",
+      "Target": "SDPNoticiasPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Excélsior",
+      "Icon": "/Assets/DataImages/ModuleLogo-14.png",
+      "Target": "ExcelsiorPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Informador",
+      "Icon": "/Assets/DataImages/ModuleLogo-15.png",
+      "Target": "InformadorPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "La Jornada",
+      "Icon": "/Assets/DataImages/ModuleLogo-16.png",
+      "Target": "LaJornadaPage"
+    }
+  ]
+}

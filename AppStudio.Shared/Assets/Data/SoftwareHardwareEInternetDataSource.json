@@ -1,0 +1,52 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "GeeksRoom",
+      "Icon": "/Assets/DataImages/ModuleLogo-26.png",
+      "Target": "GeeksRoomPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Neoteo",
+      "Icon": "/Assets/DataImages/ModuleLogo-27.png",
+      "Target": "NeoteoPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "MuyComputer",
+      "Icon": "/Assets/DataImages/ModuleLogo-28.png",
+      "Target": "MuyComputerPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Tuexperto",
+      "Icon": "/Assets/DataImages/ModuleLogo-30.png",
+      "Target": "TuexpertoPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "The Inquirer",
+      "Icon": "/Assets/DataImages/ModuleLogo-31.png",
+      "Target": "TheInquirerPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Genbeta",
+      "Icon": "/Assets/DataImages/ModuleLogo-32.png",
+      "Target": "GenbetaPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "FayerWayer",
+      "Icon": "/Assets/DataImages/ModuleLogo-33.png",
+      "Target": "FayerWayerPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Engadget",
+      "Icon": "/Assets/DataImages/ModuleLogo-34.png",
+      "Target": "EngadgetPage"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "Xataka",
+      "Icon": "/Assets/DataImages/ModuleLogo-17.png",
+      "Target": "XatakaPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "TICbeat",
+      "Icon": "/Assets/DataImages/ModuleLogo-18.png",
+      "Target": "TICbeatPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Tecnogeek",
+      "Icon": "/Assets/DataImages/ModuleLogo-19.png",
+      "Target": "TecnogeekPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Tecnodatum",
+      "Icon": "/Assets/DataImages/ModuleLogo-20.png",
+      "Target": "TecnodatumPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "NoPuedoCreer",
+      "Icon": "/Assets/DataImages/ModuleLogo-21.png",
+      "Target": "NoPuedoCreerPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Microsiervos",
+      "Icon": "/Assets/DataImages/ModuleLogo-22.png",
+      "Target": "MicrosiervosPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Hipertextual",
+      "Icon": "/Assets/DataImages/ModuleLogo-23.png",
+      "Target": "HipertextualPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Gizmodo",
+      "Icon": "/Assets/DataImages/ModuleLogo-24.png",
+      "Target": "GizmodoPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Parentesis",
+      "Icon": "/Assets/DataImages/ModuleLogo-25.png",
+      "Target": "ParentesisPage"
+    }
+  ]
+}

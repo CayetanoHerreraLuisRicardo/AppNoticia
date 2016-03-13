@@ -1,0 +1,44 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:AppStudio.Controls"
+    xmlns:html2xaml="using:AppStudio.Controls.Html2Xaml"
+    xmlns:commands="using:AppStudio.Commands">
+
+    <!-- MenuListPhotoLeft -->
+    <DataTemplate x:Key="ContactoList">
+        <ListView ItemsSource="{Binding Items}" SelectionMode="None" IsSwipeEnabled="False" IsItemClickEnabled="True" commands:ItemClickCommand.Command="{Binding ItemClickCommand}"
+                    ScrollViewer.VerticalScrollBarVisibility="Hidden" ItemTemplate="{StaticResource ContactoItem}"/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="ContactoListSnapped">
+        <ListView ItemsSource="{Binding Items}" SelectionMode="None" IsSwipeEnabled="False" IsItemClickEnabled="True" commands:ItemClickCommand.Command="{Binding ItemClickCommand}"
+                    ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                    ItemTemplate="{StaticResource ContactoItemSnapped}"/>
+    </DataTemplate>
+
+    <!-- MenuListPhotoLeft Item -->
+    <DataTemplate x:Key="ContactoItem">
+        <Grid Width="350" Height="80">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="280" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="{Binding Icon}" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="1" Margin="5,0,0,0" Text="{Binding Title}" Style="{StaticResource SubtitleStyle}" VerticalAlignment="Center"/>          
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="ContactoItemSnapped">
+        <Grid Width="170" Height="80">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="{Binding Icon}" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="1" Margin="5,0,0,0" Text="{Binding Title}" Style="{StaticResource SubtitleStyle}" VerticalAlignment="Center"/>          
+        </Grid>
+    </DataTemplate>
+
+
+</ResourceDictionary>

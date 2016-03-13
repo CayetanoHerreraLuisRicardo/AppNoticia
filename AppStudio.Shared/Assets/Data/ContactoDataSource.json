@@ -1,0 +1,22 @@
+{
+  "Items": [
+    {
+      "Type": "Url",
+      "Title": "Sitio Web",
+      "Icon": "/Assets/DataImages/ModuleLogo.png",
+      "Target": "http://cayetanoherreraluisricardo.bitbucket.org/"
+    },
+    {
+      "Type": "Url",
+      "Title": "Email",
+      "Icon": "/Assets/DataImages/ModuleLogo-2.png",
+      "Target": "mailto:luisfobia92@gmail.com"
+    },
+    {
+      "Type": "Url",
+      "Title": "Celular",
+      "Icon": "/Assets/DataImages/ModuleLogo-3.png",
+      "Target": "tel:9515505454"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<Page
+    x:Class="AppStudio.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppStudio.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:AppStudio.ViewModels"
+    mc:Ignorable="d">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Hub x:Name="Container" Grid.Row="1" Margin="0,32,0,0" Background="{StaticResource AppBackground}" DataContext="{Binding}" HeaderTemplate="{StaticResource PageHeader}" SectionsInViewChanged="OnSectionsInViewChanged">
+            <HubSection x:Name="DiariosDeMexicoYElMundoSection" Width="360" Header="Diarios de Mexico y el Mundo" HeaderTemplate="{StaticResource HubSectionHeaderTemplate}" DataContext="{Binding MainViewModel.DiariosDeMexicoYElMundoModel}"
+                        d:DataContext="{d:DesignData Source=/Assets/Data/DiariosDeMexicoYElMundoDataSource.json, Type=vm:DiariosDeMexicoYElMundoViewModel, IsDesignTimeCreatable=true}"
+                        ContentTemplate="{StaticResource DiariosDeMexicoYElMundoList}" IsHeaderInteractive="{Binding HasMoreItems}" />
+            <HubSection x:Name="ActualidadYNovedadesSection" Width="360" Header="Actualidad y Novedades" HeaderTemplate="{StaticResource HubSectionHeaderTemplate}" DataContext="{Binding MainViewModel.ActualidadYNovedadesModel}"
+                        d:DataContext="{d:DesignData Source=/Assets/Data/ActualidadYNovedadesDataSource.json, Type=vm:ActualidadYNovedadesViewModel, IsDesignTimeCreatable=true}"
+                        ContentTemplate="{StaticResource ActualidadYNovedadesList}" IsHeaderInteractive="{Binding HasMoreItems}" />
+            <HubSection x:Name="SoftwareHardwareEInternetSection" Width="360" Header="Software Hardware e Internet" HeaderTemplate="{StaticResource HubSectionHeaderTemplate}" DataContext="{Binding MainViewModel.SoftwareHardwareEInternetModel}"
+                        d:DataContext="{d:DesignData Source=/Assets/Data/SoftwareHardwareEInternetDataSource.json, Type=vm:SoftwareHardwareEInternetViewModel, IsDesignTimeCreatable=true}"
+                        ContentTemplate="{StaticResource SoftwareHardwareEInternetList}" IsHeaderInteractive="{Binding HasMoreItems}" />
+            <HubSection x:Name="ContactoSection" Width="360" Header="Contacto" HeaderTemplate="{StaticResource HubSectionHeaderTemplate}" DataContext="{Binding MainViewModel.ContactoModel}"
+                        d:DataContext="{d:DesignData Source=/Assets/Data/ContactoDataSource.json, Type=vm:ContactoViewModel, IsDesignTimeCreatable=true}"
+                        ContentTemplate="{StaticResource ContactoList}" IsHeaderInteractive="{Binding HasMoreItems}" />
+            <HubSection x:Name="AcercaDeSection" Width="360" Header="Acerca de" HeaderTemplate="{StaticResource HubSectionHeaderTemplate}" DataContext="{Binding MainViewModel.AcercaDeModel}"
+                        d:DataContext="{d:DesignData Source=/Assets/Data/AcercaDeDataSource.json, Type=vm:AcercaDeViewModel, IsDesignTimeCreatable=true}"
+                        ContentTemplate="{StaticResource AcercaDeList}" IsHeaderInteractive="{Binding HasMoreItems}" />
+        </Hub>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar Visibility="{Binding MainViewModel.AppBarVisibility}" ClosedDisplayMode="Minimal" Background="{StaticResource AppBarBackground}" Foreground="{StaticResource AppBarForeground}">
+            <AppBarButton x:Uid="TextToSpeechButton" Icon="Volume" DataContext="{Binding MainViewModel.SelectedItem}" Command="{Binding TextToSpeechCommand}" Visibility="{Binding TextToSpeechVisibility}"/>
+            <AppBarButton x:Uid="RefreshButton" Icon="Refresh" DataContext="{Binding MainViewModel}" Command="{Binding RefreshCommand}" Visibility="{Binding RefreshVisibility}"/>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Uid="PrivacyButton" Label="privacy" Command="{Binding MainViewModel.PrivacyCommand}"/>
+                <AppBarButton x:Uid="ShareItemButton" Label="share item" DataContext="{Binding MainViewModel.SelectedItem}" Visibility="{Binding ShareItemVisibility}" Command="{Binding ShareItemCommand}"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
